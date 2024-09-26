@@ -15,6 +15,9 @@ import javafx.scene.control.ToggleGroup;
 
 /**
  * Clase que controla la lógica de la aplicación.
+ * @author Lierni
+ * @version 1.0
+ * @since 1.0
  */
 public class HelloController {
 
