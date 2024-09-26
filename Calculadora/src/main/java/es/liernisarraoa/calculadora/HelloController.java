@@ -38,7 +38,6 @@ public class HelloController {
 
     @FXML
     void onCalcular(ActionEvent event) {
-        //botonCalcular.setOnAction(this::onCalcular);
         RadioButton radioSeleccionado = (RadioButton) grupoRadio.getSelectedToggle();
         if (radioSeleccionado == suma){
             int solucion = Integer.parseInt(operador2.getText()) + Integer.parseInt(operador1.getText());
