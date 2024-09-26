@@ -38,7 +38,33 @@ public class HelloController {
 
     @FXML
     void onCalcular(ActionEvent event) {
-
+        //botonCalcular.setOnAction(this::onCalcular);
+        RadioButton radioSeleccionado = (RadioButton) grupoRadio.getSelectedToggle();
+        if (radioSeleccionado == suma){
+            int solucion = Integer.parseInt(operador2.getText()) + Integer.parseInt(operador1.getText());
+            respuesta.setText(String.valueOf(solucion));
+        }
+        if (radioSeleccionado == resta){
+            if (Integer.parseInt(operador1.getText()) < Integer.parseInt(operador2.getText())) {
+                int solucion = Integer.parseInt(operador2.getText()) - Integer.parseInt(operador1.getText());
+                respuesta.setText(String.valueOf(solucion));
+            } else  {
+                int solucion = Integer.parseInt(operador1.getText()) - Integer.parseInt(operador2.getText());
+                respuesta.setText(String.valueOf(solucion));
+            }
+        }
+        if (radioSeleccionado == multiplicacion){
+            int solucion = Integer.parseInt(operador1.getText()) * Integer.parseInt(operador2.getText());
+            respuesta.setText(String.valueOf(solucion));
+        }
+        if (radioSeleccionado == division){
+            if(Integer.parseInt(operador1.getText()) == 0 || Integer.parseInt(operador2.getText()) == 0){
+                respuesta.setText("No se puede hacer la division ya que algún operador es igual a 0.");
+            } else {
+                int solucion = Integer.parseInt(operador1.getText()) / Integer.parseInt(operador2.getText());
+                respuesta.setText(String.valueOf(solucion));
+            }
+        }
     }
 
 }
