@@ -119,7 +119,7 @@ public class HelloController {
             /**
              * Verificamos si alguno de los operadores es cero para evitar la división por cero.
              */
-            if(Integer.parseInt(operador1.getText()) == 0 || Integer.parseInt(operador2.getText()) == 0){
+            if(Integer.parseInt(operador1.getText()) == 0){
 
                 /**
                  * Mostramos un mensaje de error si se intenta dividir por cero.
